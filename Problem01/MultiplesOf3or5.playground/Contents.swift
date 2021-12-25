@@ -8,11 +8,11 @@ func solution(p: Int) -> Int {
     let three: Double = (Double(p) / 3.0).rounded(.down)
     let five: Double = (Double(p) / 5.0).rounded(.down)
     let mcm: Double = (Double(p) / 15.0).rounded(.down)
-    let result3:Int = Int(3 * three * (three + 1.0) * 0.5)
-    let result5:Int = Int(5 * five * (five + 1.0) * 0.5)
-    let result15:Int = Int(15 * mcm * (mcm + 1.0) * 0.5)
+    let result3:Int = Int(3 * three * (three + 1.0))
+    let result5:Int = Int(5 * five * (five + 1.0))
+    let result15:Int = Int(15 * mcm * (mcm + 1.0))
     
-    let result: Double =  Double(result3  + result5  - result15)
+    let result: Double =  Double(result3  + result5  - result15) * 0.5
     
     return Int(result)
 }
